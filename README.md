@@ -13,4 +13,4 @@ Configuracion de servidor
 BD_CONNECTION = mongodb://localhost:27017/bdcristhian
 SECRET_KEY_JWT = cristhiancode11
 9. Luego dentro de bakend creamos otra carpeta llamada bd y dentro de esta creamos un archivo que se llame db.js el cual sirve para hacer el codigo de conexion a la base de datos
-10. y ya con esto tenemos lista la configuracion
+10. y ya con esto tenemos lista la configuracion y ya despues tenemos que conectar la base de datos, crear y ejecutar nuestro servidor
