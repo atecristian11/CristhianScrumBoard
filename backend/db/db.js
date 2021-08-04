@@ -14,7 +14,7 @@ const dbConnection = async () => {
     }); //el process saca de los .env las variables que necesitemos en este caso fue la variable de la url
     console.log("Connection with MongoDB: ON"); //con este mostramos que nos conectamos adecuadamente a la bd por consola
   } catch (e) {
-      console.log("Error connectiong to MongoDB: ", e); //con este mostramos en la consola el error de conexion a la bd
+      console.log("Error connectiong to MongoDB: ",e); //con este mostramos en la consola el error de conexion a la bd
       throw new Error ("Error connectiong to MongoDB."); //con esta linea nos va a mostrar este mensaje en la consola de una manera mas entendible y bonita
   }
 };

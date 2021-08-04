@@ -8,7 +8,7 @@ app.use(express.json()); //todo lo que va ha manipular nuestro servidor va hacer
 app.use(cors()); //para las reglas de conexion a nuestro backend
 
 app.listen(process.env.PORT, () =>
-  console.log("Backend server running OK, on port: ", process.env.PORT)
+  console.log("Backend server running OK, on port:", process.env.PORT)
 ); //con esta le estamos indicando por el puerto que se va ejecutar y un mensaje para cuando se ejecute el servidor
 
 dbConnection(); //con esta nos conectamos a la base de datos
