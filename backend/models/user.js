@@ -3,13 +3,13 @@ const jwt = require("jsonwebtoken");
 const moment = require("moment"); //sirve para dar formatos de fecha
 
 //sirve para crear el esquema de usuario en la bd dentro de un json
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
   roleId: { type: mongoose.Schema.ObjectId, ref: "role" }, //con este le decimos a la bd que va tener un id con ObjID y la referencia es de role
-  date: { typo: Date, default: Date.now },
-  dbSatus: Boolean,
+  date: { type: Date, default: Date.now },
+  dbStatus: Boolean,
 });
 
 userSchema.methods.generateJWT = function () {
