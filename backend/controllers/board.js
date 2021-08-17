@@ -1,4 +1,3 @@
-const { rawListeners } = require("../models/board");
 const Board = require("../models/board");
 
 const saveTask = async (req, res) => {
@@ -6,7 +5,7 @@ const saveTask = async (req, res) => {
     return res.status(400).send("Process failed: Incomplete data");
 
   const board = new Board({
-    userId: req.body.userId,
+    userId: req.user._id, //con esta colocamos automaticamente asignamos la tarea a la persona logueada en el momento
     name: req.body.name,
     description: req.body.description,
     taskStatus: "To-do",

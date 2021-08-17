@@ -17,9 +17,9 @@ const auth = async (req, res, next) => {
     const payload = await jwt.verify(jwtToken, process.env.SECRET_KEY_JWT); //con el verify miramos si el jstToken si es valido y tambien miramos que si tenga la palabra clave que nosotros hemos creado y el payload es el cuerpo del json que tenemos creado en el modelo user
     req.user = payload; //aqui le asignamos el payload al usuario que se esta loguiando si todo esta bien
     next(); //con este continua con el proceso que el desee
-  } catch (e) {
+} catch (e) {
     return res.status(400).send("Authorization denied: Invalid token");
   }
 };
 
-module.exports = { auth };
+module.exports = auth; //se le quitan las llaves ya que son middleware y estos no pueden tener llaves en la funcion o sino sale un error 
