@@ -5,5 +5,13 @@ const Auth = require("../middleware/auth"); //traemos los middleware de segurida
 const ValidateUser = require("../middleware/validateUser");
 
 router.post("/saveTask", Auth, ValidateUser, BoardController.saveTask); //con esto solo pueden crear tareas si estan logueados
+router.get("/listTask", Auth, ValidateUser, BoardController.listTask);
+router.put("/updateTask", Auth, ValidateUser, BoardController.updateTask);
+router.delete(
+  "/deleteTask/:_id",
+  Auth,
+  ValidateUser,
+  BoardController.deleteTask
+);
 
 module.exports = router;
